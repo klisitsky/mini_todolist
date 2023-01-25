@@ -1,0 +1,98 @@
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s;
+}
+
+.popup.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup.open .popup__content {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+.popup__body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  padding: 20px 10px;
+  backdrop-filter: blur(3px);
+}
+
+.popup__content {
+  background-color: #2c2e31;
+  padding: 10px 30px 20px;
+  width: 800px;
+  position: relative;
+  border-radius: .375em;
+  transition: all .3s;
+  opacity: 0;
+  transform: translate(0px, -100%);
+}
+
+.popup__status-task {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.popup__mark-task {
+  color: #b4b4b4a3;
+  font-size: 16px;
+}
+
+.popup__status-text {
+  color: #b4b4b4a3;
+  font-size: 16px;
+}
+
+.popup__status-text::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 95%;
+  background-color: #686868a3;
+}
+
+
+.popup__btn-close {
+  position: absolute;
+  text-decoration: none;
+  top: 0;
+  right: 0;
+  border: none;
+  background-color: inherit;
+  border-radius: 0 .375em 0 1px;
+  transition: all .2s;
+}
+
+.popup__btn-close:hover {
+  background-color: #a2352d;
+}
+
+.popup__btn-close > img {
+  width: 30px;
+  height: 30px;
+}
+
+.popup__title {
+  color: #ffffffa3;
+  margin-bottom: 30px;
+}
+
+.popup__btns {
+  display: flex;
+  justify-content: end;
+  font-size: 20px;
+}

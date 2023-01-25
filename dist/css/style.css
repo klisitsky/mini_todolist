@@ -1,0 +1,141 @@
+* {
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background-color: #2c2e31;
+}
+
+.custom {
+    padding: 5px 10px;
+    font-size: 20px;
+    margin-right: 15px;
+}
+.custom:last-child {
+    margin: 0;
+}
+
+.navbar__form-add {
+    margin: 30px auto; 
+}
+
+.form-add__input-task {
+    width: 600px;
+    margin-right: 40px;
+    background-color: #ffffffcc;
+}
+
+.block-tasks {
+    padding-top: 15px;
+}
+
+.block-tasks__title-active-tasks {
+    padding: 0 0 20px 150px;
+    color: #b4b4b4a3;
+    position: relative;
+}
+
+.block-tasks__title-active-tasks::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 920px;
+    background-color: #686868a3;
+    top: 40px;
+    left: 120px;
+}
+
+.block-tasks__task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#33363a;
+    width: 950px;
+    border-radius: 0.375em;
+    margin: 0 auto 20px;
+    padding: 20px;
+    color: #ffffffa3;
+    transition: background-color .3s;
+}
+
+.block-tasks__task:last-child {
+    margin: 0 auto;
+}
+
+.block-tasks__task.done {
+    background-color: #7c8187;
+}
+
+.task__status {
+    display: none;
+}
+
+.task__checkbox {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    border: 3px solid #ffffffa3;
+    border-radius: 50%;
+    margin-right: 15px;
+    position: relative;
+}
+
+.task__checkbox::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 18px;
+    background-image: url('/dist/img/icons/checkmark.svg');
+    background-size: contain;
+    opacity: 0;
+    transition: .3s;
+}
+
+.task__status:checked + .task__checkbox::before {
+    opacity: 1;
+}
+
+.task__text {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.btns {
+    display: flex;
+}
+
+.btn-option {
+    padding: 4px 10px;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 0.375em;
+}
+
+.btn-option:last-child {
+    margin: 0;
+}
+
+.btn-option:hover {
+    background-color: #43464b;
+}
+
+.btn-option > img {
+    width: 24px;
+    height: 24px;
+}
+
+.task__text-value {
+    transition: text-decoration .4s;
+}
+
+.task__text-value.cross-out {
+    text-decoration: line-through;
+}
+

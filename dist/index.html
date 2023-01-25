@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Form</title>
+    <link rel="stylesheet" href="/dist/css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/dist/css/style.css" />
+    <link rel="stylesheet" href="/dist/css/popupCardTask.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <form class="navbar__form-add form-add d-flex">
+          <input
+            class="form-add__input-task form-control"
+            name="task"
+            type="text"
+            placeholder="Новая задача"
+          />
+          <button class="form-add__btn btn btn-primary" type="submit">
+            Добавить
+          </button>
+        </form>
+      </div>
+    </nav>
+    <section class="block-tasks">
+      <div class="container"></div>
+    </section>
+    <div id="popup" class="popup">
+        <div class="popup__body">
+          <div class="popup__content">
+            <button class="popup__btn-close">
+              <img src="/dist/img/icons/cross.svg" alt="close-window">
+            </button>
+            <div class="popup__status-task">
+              <span class="popup__mark-task">&#8226;</span>
+              <span class="popup__status-text"></span>
+            </div>
+            <div class="popup__title"></div>
+            <div class="popup__btns">
+              <button class="popup__btn-change btn btn-secondary custom">
+                  Изменить
+              </button>
+              <button class="popup__btn-delete btn btn-danger custom">
+                  Удалить
+              </button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <script src="/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/dist/js/script.js"></script>
+  </body>
+</html>
